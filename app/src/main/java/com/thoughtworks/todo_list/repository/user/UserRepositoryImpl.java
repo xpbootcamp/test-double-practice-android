@@ -34,4 +34,10 @@ public class UserRepositoryImpl implements UserRepository {
     public Completable save(User user) {
         return localUserDataSource.save(user);
     }
+
+    /*待完成部分*/
+    @Override
+    public Maybe<User> register(String username, String password) {
+        throw new RuntimeException();
+    }
 }

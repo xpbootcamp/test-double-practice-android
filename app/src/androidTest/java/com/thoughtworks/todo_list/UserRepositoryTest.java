@@ -6,9 +6,9 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 
 import com.thoughtworks.todo_list.repository.AppDatabase;
-import com.thoughtworks.todo_list.ui.login.UserRepository;
 import com.thoughtworks.todo_list.repository.user.UserRepositoryImpl;
 import com.thoughtworks.todo_list.repository.user.entity.User;
+import com.thoughtworks.todo_list.ui.login.UserRepository;
 
 import org.junit.After;
 import org.junit.Before;
@@ -33,7 +33,7 @@ public class UserRepositoryTest {
         appDatabase = Room.inMemoryDatabaseBuilder(
                 InstrumentationRegistry.getInstrumentation().getTargetContext(),
                 AppDatabase.class).build();
-        userRepository = new UserRepositoryImpl(appDatabase.userDBDataSource());
+        userRepository = new UserRepositoryImpl(appDatabase.userDBDataSource(), null);
     }
 
     @After

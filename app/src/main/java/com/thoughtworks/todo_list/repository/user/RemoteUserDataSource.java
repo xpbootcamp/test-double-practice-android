@@ -14,4 +14,9 @@ public class RemoteUserDataSource {
         return Flowable.fromFuture(HttpUtils.getString("https://twc-android-bootcamp.github.io/fake-data/data/user.json"))
                 .map(response -> JsonUtils.from(response, User.class)).filter(user -> user.getName().equals(name)).firstElement();
     }
+
+    /*待完成部分*/
+    public Maybe<User> register(String username, String password) {
+        throw new RuntimeException();
+    }
 }

@@ -9,4 +9,7 @@ public interface UserRepository {
     Maybe<User> findByName(String name);
 
     Completable save(User user);
+
+
+    Maybe<User> register(String username, String password);
 }
